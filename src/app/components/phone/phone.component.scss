@@ -1,0 +1,11 @@
+.header__phone-info {
+  font-size: 16px;
+  font-family: "Gilroy-Bold", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+  .header__phone-info {
+    display: none;
+  }
+}
