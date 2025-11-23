@@ -5,15 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { PhoneComponent } from './components/phone/phone.component';
-import { PresentComponent } from './components/present/present.component';
 import { InstagramComponent } from './components/instagram/instagram.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhoneComponent,
-    PresentComponent,
-    InstagramComponent
+    InstagramComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +21,6 @@ import { InstagramComponent } from './components/instagram/instagram.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,PhoneComponent,PresentComponent,InstagramComponent]
+  bootstrap: [AppComponent,PhoneComponent,CartComponent,InstagramComponent]
 })
 export class AppModule { }
