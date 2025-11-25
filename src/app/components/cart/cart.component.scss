@@ -51,6 +51,10 @@
   font-family: "Gilroy-Medium", sans-serif;
   color: rgb(119, 10, 29);
   line-height: 1.333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-cloud {
@@ -67,7 +71,7 @@
 
 .cloud {
   position: relative;
-  padding: 13px 10px 14px 10px;
+  padding: 20px 10px 14px 10px;
   box-sizing: border-box;
   border-width: 2px;
   border-color: rgb(119, 10, 29);
