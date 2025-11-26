@@ -65,19 +65,4 @@
   width: 130px;
 }
 
-@media screen and (max-width: 1200px) {
-  .select__products {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 263px);
-    gap: 138px 30px;
-    justify-content: center
-  }
-}
 
-@media screen and (max-width: 580px) {
-
-  .select__products {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns:  263px;
-  }
-}

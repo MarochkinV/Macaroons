@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ProductType} from "../../types/product.type";
-import {AdvantageType} from "../../types/advantage.type";
-import {ButtonEffectDirective} from "../../directives/button-effect.directive";
 
 @Component({
   selector: 'product',
