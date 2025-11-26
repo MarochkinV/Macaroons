@@ -36,25 +36,25 @@ export class AppComponent {
       image: 'product-1.png',
       title: 'Макарун с малиной',
       amount: '1 шт.',
-      price: '1,70 руб.',
+      price: 1.70,
     },
     {
       image: 'product-2.png',
       title: 'Макарун с манго',
       amount: '1 шт.',
-      price: '1,70 руб.',
+      price: 1.70,
     },
     {
       image: 'product-3.png',
       title: 'Пирог с ванилью',
       amount: '1 шт.',
-      price: '1,70 руб.',
+      price: 1.70,
     },
     {
       image: 'product-4.png',
       title: 'Пирог с фисташками',
       amount: '1 шт.',
-      price: '1,70 руб.',
+      price: 1.70,
     },
   ];
 
@@ -67,6 +67,7 @@ export class AppComponent {
   public burgerOpenMenu(target: HTMLElement): void {
     target.classList.add('open');
   };
+
   public burgerCloseMenu(target: HTMLElement): void {
     target.classList.remove('open');
   };
@@ -78,6 +79,7 @@ export class AppComponent {
   public addToCart(product: ProductType, target: HTMLElement): void {
     this.scrollTo(target);
     this.formValues.productTitle = product.title.toUpperCase();
+    alert(product.title + ' добавлен в корзину!')
   };
 
   public createOrder() {
