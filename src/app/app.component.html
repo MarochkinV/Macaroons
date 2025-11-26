@@ -93,17 +93,7 @@
       </div>
     </div>
     <div class="overview__benefits">
-
       <advantage *ngFor="let advantage of advantages" [advantage]="advantage"></advantage>
-
-      <div class="overview__benefit-item" *ngFor="let advantage of advantages">
-        <div class="overview__benefit-icon">
-          <span class="overview__benefit-icon_number">{{ advantage.number }}</span>
-        </div>
-        <div class="overview__benefit-subtitle">{{ advantage.title }}</div>
-        <div class="overview__benefit-text">{{ advantage.description }}</div>
-      </div>
-
     </div>
   </div>
 </section>

@@ -191,51 +191,7 @@
   box-sizing: border-box;
 }
 
-.overview__benefit-item {
-  width: 220px;
-}
 
-.overview__benefit-item:hover > .overview__benefit-icon {
-  background: #eba8b1;
-}
-
-.overview__benefit-item:hover .overview__benefit-icon_number {
-  color: #821328;
-}
-
-.overview__benefit-icon {
-  margin-bottom: 13px;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #821328;
-  position: relative;
-}
-
-.overview__benefit-icon_number {
-  font-size: 60px;
-  font-family: "Gilroy-ExtraBold", sans-serif;
-  color: rgb(255, 255, 255);
-  line-height: 0.75;
-  position: absolute;
-  bottom: -2px;
-  left: 20px;
-  transition: 1s ease;
-}
-
-.overview__benefit-subtitle {
-  font-size: 20px;
-  font-family: "Gilroy-ExtraBold", sans-serif;
-  color: rgb(51, 25, 7);
-  margin-bottom: 16px;
-}
-
-.overview__benefit-text {
-  font-size: 15px;
-  font-family: "Gilroy-Medium", sans-serif;
-  color: rgb(51, 25, 7);
-  line-height: 1.333;
-}
 
 /*-----select-----*/
 .select {
@@ -551,17 +507,6 @@
     gap: 50px;
   }
 
-  .overview__benefit-icon {
-    margin: 0 auto;
-  }
-
-  .overview__benefit-subtitle {
-    text-align: center;
-  }
-
-  .overview__benefit-text {
-    text-align: center;
-  }
 
   .overview__info-description {
     margin-bottom: 40px;
@@ -576,9 +521,7 @@
     height: 283px;
   }
 
-  .overview__benefit-icon {
-    margin-bottom: 13px;
-  }
+
 
   .order {
     padding: 120px 20px 120px 20px;
@@ -759,10 +702,7 @@
     font-size: 36px;
   }
 
-  .overview__benefit-text {
-    margin: 0 auto;
-    max-width: 165px;
-  }
+
 
   .overview__benefits {
     grid-template-columns:165px 165px;
@@ -770,17 +710,6 @@
     justify-content: center;
   }
 
-  .overview__benefit-subtitle {
-    font-size: 18px;
-  }
-
-  .overview__benefit-text {
-    font-size: 13px;
-  }
-
-  .overview__benefit-item {
-    max-width: 165px;
-  }
 
   .select__title {
     font-size: 30px;
@@ -947,13 +876,7 @@
     width: 100%;
   }
 
-  .overview__benefit-text {
-    font-size: 15px;
-  }
 
-  .overview__benefit-subtitle {
-    font-size: 20px;
-  }
 
   .select {
     padding: 100px 15px 100px 15px;

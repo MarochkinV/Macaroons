@@ -1,0 +1,17 @@
+<div class="select__product">
+  <div class="select__product_image">
+    <img class="product-image" src="assets/images/{{product.image}}">
+  </div>
+  <div class="select__product_subtitle">{{ product.title }}</div>
+  <div class="select__product_action">
+    <div class="select__product_info">
+      <div class="product_amount">{{ product.amount }}</div>
+      <div class="product_price">{{ product.price }}</div>
+    </div>
+    <div class="select__product_btn">
+      <button class="btn product_btn">Заказать</button>
+    </div>
+  </div>
+</div>
+
+<!--(click)="addToCart(product, orderElement)"-->
