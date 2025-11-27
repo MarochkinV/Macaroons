@@ -3,8 +3,6 @@ import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
 import {ProductService} from "./services/product.service";
 import {CartService} from "./services/cart.service";
-import {CartPriceService} from "./services/cart-price.service";
-
 
 @Component({
   selector: 'app-root',
@@ -44,7 +42,8 @@ export class AppComponent implements OnInit {
   };
 
 
-  constructor(private productService: ProductService, public cartService: CartService, public cartPriceService: CartPriceService) {
+  constructor(private productService: ProductService,
+              public cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -66,9 +65,8 @@ export class AppComponent implements OnInit {
   public addToCart(product: ProductType, target: HTMLElement): void {
     this.scrollTo(target);
     this.formValues.productTitle = product.title.toUpperCase();
-    alert(product.title + ' добавлен в корзину!')
-    this.cartService.count++;
-    this.cartPriceService.total++;
+    this.cartService.addProduct(product);
+    alert(product.title + ' добавлен в корзину!');
   };
 
   public createOrder() {
@@ -85,9 +83,9 @@ export class AppComponent implements OnInit {
       return;
     }
 
-    //ajax запрос на сервер
+    //ajax
     alert('Спасибо за заказ')
-
+    this.cartService.clearCart();
     this.formValues = {
       productTitle: '',
       name: '',
