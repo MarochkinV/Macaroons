@@ -1,12 +1,12 @@
 <div class="cart__items" *ngIf="showCart">
   <div class="cart">
     <img class="image-cart" src="assets/images/cart.png" alt="корзина">
-    <div class="amount">2</div>
+    <div class="amount">{{cartService.count}}</div>
   </div>
   <div class="cart-cloud">
     <div class="cloud">
       <div class="cloud-text">
-        3,40 РУБ.
+        {{cartPriceService.total}}
       </div>
     </div>
   </div>

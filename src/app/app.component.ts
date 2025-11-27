@@ -1,13 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
+import {ProductService} from "./services/product.service";
+import {CartService} from "./services/cart.service";
+import {CartPriceService} from "./services/cart-price.service";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public advantages: AdvantageType[] = [
     {
       number: '1',
@@ -31,38 +35,21 @@ export class AppComponent {
     },
   ];
 
-  public products: ProductType[] = [
-    {
-      image: 'product-1.png',
-      title: 'Макарун с малиной',
-      amount: '1 шт.',
-      price: 1.70,
-    },
-    {
-      image: 'product-2.png',
-      title: 'Макарун с манго',
-      amount: '1 шт.',
-      price: 1.70,
-    },
-    {
-      image: 'product-3.png',
-      title: 'Пирог с ванилью',
-      amount: '1 шт.',
-      price: 1.70,
-    },
-    {
-      image: 'product-4.png',
-      title: 'Пирог с фисташками',
-      amount: '1 шт.',
-      price: 1.70,
-    },
-  ];
+  public products: ProductType[] = []
 
   public formValues = {
     productTitle: '',
     name: '',
     phone: ''
   };
+
+
+  constructor(private productService: ProductService, public cartService: CartService, public cartPriceService: CartPriceService) {
+  }
+
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
+  }
 
   public burgerOpenMenu(target: HTMLElement): void {
     target.classList.add('open');
@@ -80,6 +67,8 @@ export class AppComponent {
     this.scrollTo(target);
     this.formValues.productTitle = product.title.toUpperCase();
     alert(product.title + ' добавлен в корзину!')
+    this.cartService.count++;
+    this.cartPriceService.total++;
   };
 
   public createOrder() {

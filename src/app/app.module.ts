@@ -16,6 +16,8 @@ import {AdvantageComponent} from './components/advantage/advantage.component';
 import {ButtonEffectDirective} from './directives/button-effect.directive';
 import {TextLimitPipe} from './pipes/text-limit.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import {ProductService} from "./services/product.service";
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 
   ],
   providers: [
+    ProductService,
     {provide: LOCALE_ID, useValue: 'ru'}
   ],
   bootstrap: [AppComponent, PhoneComponent, CartComponent, InstagramComponent]
