@@ -82,9 +82,9 @@
         уже более 10 лет
       </div>
       <div class="overview__info-description">
-        Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
-        ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,
-        разрыхлителей и улучшителей муки.
+        Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,ароматизаторов,
+        красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,разрыхлителей и улучшителей
+        муки.
       </div>
     </div>
     <div class="overview__image">
@@ -104,12 +104,13 @@
       Выберите свой макарун
     </div>
     <div class="select__products">
-      <product *ngFor="let product of products" [product]="product" (addToCartEvent)="addToCart($event,orderElement)"></product>
+      <product *ngFor="let product of products" [product]="product"
+               (addToCartEvent)="addToCart($event,orderElement)"></product>
     </div>
   </div>
 </section>
 
-<section class="order" >
+<section class="order">
   <div class="container order__container">
     <div class="order__image">
       <div class="strawberry-left">
@@ -131,7 +132,7 @@
         Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
       </div>
       <div class="order__form-form">
-        <form action="#" method="POST" >
+        <form action="#" method="POST">
           <p class="order__form-text">Ваш выбор</p>
           <div class="order__form-input">
             <label>

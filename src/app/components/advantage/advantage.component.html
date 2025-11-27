@@ -3,5 +3,5 @@
     <span class="overview__benefit-icon_number">{{ advantage.number }}</span>
   </div>
   <div class="overview__benefit-subtitle">{{ advantage.title }}</div>
-  <div class="overview__benefit-text">{{ advantage.description }}</div>
+  <div class="overview__benefit-text">{{ advantage.description | textLimit }}</div>
 </div>

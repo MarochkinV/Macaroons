@@ -1,19 +1,21 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { registerLocaleData } from '@angular/common';
+import {NgModule, LOCALE_ID} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {registerLocaleData} from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
 
 registerLocaleData(localeRu, 'ru');
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FormsModule } from "@angular/forms";
-import { PhoneComponent } from './components/phone/phone.component';
-import { InstagramComponent } from './components/instagram/instagram.component';
-import { CartComponent } from './components/cart/cart.component';
-import { ProductComponent } from './components/product/product.component';
-import { AdvantageComponent } from './components/advantage/advantage.component';
-import { ButtonEffectDirective } from './directives/button-effect.directive';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {FormsModule} from "@angular/forms";
+import {PhoneComponent} from './components/phone/phone.component';
+import {InstagramComponent} from './components/instagram/instagram.component';
+import {CartComponent} from './components/cart/cart.component';
+import {ProductComponent} from './components/product/product.component';
+import {AdvantageComponent} from './components/advantage/advantage.component';
+import {ButtonEffectDirective} from './directives/button-effect.directive';
+import {TextLimitPipe} from './pipes/text-limit.pipe';
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,15 @@ import { ButtonEffectDirective } from './directives/button-effect.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    TextLimitPipe,
+    PhoneFormatPipe,
+
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'ru' }
+    {provide: LOCALE_ID, useValue: 'ru'}
   ],
   bootstrap: [AppComponent, PhoneComponent, CartComponent, InstagramComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

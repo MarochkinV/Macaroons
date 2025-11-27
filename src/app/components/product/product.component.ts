@@ -12,12 +12,6 @@ export class ProductComponent implements OnInit {
   @Output() addToCartEvent: EventEmitter<ProductType> = new EventEmitter<ProductType>();
 
   constructor() {
-    // this.product = {
-    //   image: '',
-    //   title: '',
-    //   amount: '',
-    //   price: '',
-    // }
   }
 
   ngOnInit(): void {
