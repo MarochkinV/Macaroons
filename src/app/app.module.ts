@@ -17,7 +17,7 @@ import {ButtonEffectDirective} from './directives/button-effect.directive';
 import {TextLimitPipe} from './pipes/text-limit.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 import {ProductService} from "./services/product.service";
-import { CurrencyRubPipe } from './pipes/currency-rub.pipe';
+
 
 
 @NgModule({
@@ -36,7 +36,7 @@ import { CurrencyRubPipe } from './pipes/currency-rub.pipe';
     FormsModule,
     TextLimitPipe,
     PhoneFormatPipe,
-    CurrencyRubPipe,
+
 
   ],
   providers: [

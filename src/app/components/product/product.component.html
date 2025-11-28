@@ -6,7 +6,7 @@
   <div class="select__product_action">
     <div class="select__product_info">
       <div class="product_amount">{{ product.amount }}</div>
-      <div class="product_price">{{ product.price | number:'1.2-2':'ru' }} руб.</div>
+      <div class="product_price">{{ product.price | currency:'RUB':'руб.' }}</div>
     </div>
     <div class="select__product_btn">
       <button class="btn product_btn" (click)="addProductToCart()" buttonEffect>Заказать</button>
